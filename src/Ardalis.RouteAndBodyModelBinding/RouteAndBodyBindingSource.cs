@@ -6,14 +6,11 @@ public class RouteAndBodyBindingSource : BindingSource
 {
 	public const string ID = "RouteAndBody";
 
-	public static readonly BindingSource RouteAndBody = new RouteAndBodyBindingSource(
-		ID,
-		ID,
-		true,
-		true
-		);
+	public static readonly BindingSource RouteAndBody = 
+		new RouteAndBodyBindingSource(ID,ID,isGreedy: true,isFromRequest: true);
 
-	public RouteAndBodyBindingSource(string id, string displayName, bool isGreedy, bool isFromRequest) : base(id, displayName, isGreedy, isFromRequest)
+	public RouteAndBodyBindingSource(string id, string displayName, bool isGreedy, bool isFromRequest)
+			: base(id, displayName, isGreedy, isFromRequest)
 	{
 	}
 

@@ -8,7 +8,8 @@ public class RouteAndBodyModelBinderProvider : IModelBinderProvider
 	private BodyModelBinderProvider _bodyModelBinderProvider;
 	private ComplexObjectModelBinderProvider _complexTypeModelBinderProvider;
 
-	public RouteAndBodyModelBinderProvider(BodyModelBinderProvider bodyModelBinderProvider, ComplexObjectModelBinderProvider complexTypeModelBinderProvider)
+	public RouteAndBodyModelBinderProvider(BodyModelBinderProvider bodyModelBinderProvider,
+		ComplexObjectModelBinderProvider complexTypeModelBinderProvider)
 	{
 		_bodyModelBinderProvider = bodyModelBinderProvider;
 		_complexTypeModelBinderProvider = complexTypeModelBinderProvider;
@@ -24,9 +25,6 @@ public class RouteAndBodyModelBinderProvider : IModelBinderProvider
 		{
 			return new RouteAndBodyModelBinder(bodyBinder, complexBinder);
 		}
-		else
-		{
-			return null;
-		}
+		return null;
 	}
 }
