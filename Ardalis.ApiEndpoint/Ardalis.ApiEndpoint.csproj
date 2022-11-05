@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>Ardalis.RouteAndBodyModelBinding</PackageId>
+		<Title>Ardalis.RouteAndBodyModelBinding</Title>
+		<Authors>Steve Smith (@ardalis)</Authors>
+		<Company>Ardalis.com</Company>
+		<PackageProjectUrl>https://github.com/ardalis/RouteAndBodyModelBinding</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ardalis/RouteAndBodyModelBinding</RepositoryUrl>
+		<Description></Description>
+		<Summary></Summary>
+		<PackageTags></PackageTags>
+		<PackageReleaseNotes>
+			Initial version
+		</PackageReleaseNotes>
+		<Version>0.0.2</Version>
+		<AssemblyName>Ardalis.RouteAndBodyModelBinding</AssemblyName>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageIcon>icon.png</PackageIcon>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\src\Ardalis.RouteAndBodyModelBinding\Ardalis.RouteAndBodyModelBinding.csproj" />
+	</ItemGroup>
+
+</Project>
